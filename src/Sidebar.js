@@ -20,7 +20,7 @@ const Sidebar = () => {
               alt="New note" 
             />
             <img className="outline" 
-              src={newIcone} 
+              src={newIcon} 
               alt="New note" 
             />
           </a>
