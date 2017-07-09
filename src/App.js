@@ -11,7 +11,7 @@ class App extends Component {
         notes:  {
         'note-4': {
           id: 'note-4',
-          title: 'From App state',
+          title: 'Still from App state',
           body: 'The fanciest!',
       },
         'note-5': {

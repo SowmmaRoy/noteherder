@@ -13,8 +13,8 @@ return (
     <div className="NoteList">
         <h3>Notes</h3>
         <ul id="notes">
-        {notesIds.map(noteId => (
-            <Note note={props.notes[noteId]}/>
+        {noteIds.map(noteId => (
+            <Note note={props.notes[noteId]} key={noteId}/>
         ))}                              
         </ul>
     </div>

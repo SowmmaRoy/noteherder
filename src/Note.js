@@ -2,6 +2,7 @@ import React from 'react'
 
 const Note = (props) => {
     const handleClick = () => {
+        console.log(this)
         console.log('clicky clicky')        
     }
 
