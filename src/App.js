@@ -3,9 +3,17 @@ import React, { Component } from 'react'
 import './App.css'
 import Main from './Main'
 
+import SignIn from './SignIn'
+
+
+// Sign in Method:
+
+
 class App extends Component {
   constructor() {
     super()
+
+    this.setCurrentNote = this.setCurrentNote.bind(this)
 
       this.state = {
         notes:  {
@@ -19,16 +27,31 @@ class App extends Component {
           title: 'Another one',
           body: 'Also very fancy',
       },
-        
-    }
+    },
+    currentNote: {
+      id:null,
+      title:'',
+      body:'',
+    },
    }
   }
+
+
+  setCurrentNote = (note) => {
+    this.setState({ currentNote: note })
+
+  }
+
 
 
   render() {
     return (
       <div className="App">
-        <Main notes={this.state.notes} />
+        <Main 
+          notes={this.state.notes} 
+          currentNote={this.state.currentNote}  
+          setCurrentNote={this.setCurrentNote}
+        />
 
       </div>
     );
@@ -36,3 +59,4 @@ class App extends Component {
 }
 
 export default App
+
