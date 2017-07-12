@@ -1,3 +1,19 @@
+## Getting Started 
+
+Copy `src/base.example.js` to `src/base.js` and fill in your Firebase config details. 
+
+Run `yarn install` (or `npm install`) and `yarn start` (or `npm  start`).
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
