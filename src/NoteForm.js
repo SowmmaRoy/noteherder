@@ -3,6 +3,13 @@ import React, { Component } from 'react'
 import './NoteForm.css'
 
 class NoteForm extends Component {
+  handleChanges = (ev) => {
+    console.log(ev.target.name)
+    const note = {...this.props.currentNote}
+    note[ev.target.name] = ev.target.value
+    this.props.saveNote(note)
+
+  }
     render () {
       const { currentNote } = this.props
         return (
@@ -19,6 +26,7 @@ class NoteForm extends Component {
                 name="title"
                 placeholder="Title your note"
                 value={currentNote.title}
+                onChange={}
               />
             </p>
             

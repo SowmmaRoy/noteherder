@@ -5,10 +5,6 @@ import Main from './Main'
 
 import SignIn from './SignIn'
 
-
-// Sign in Method:
-
-
 class App extends Component {
   constructor() {
     super()
@@ -47,13 +43,24 @@ class App extends Component {
   resetCurrentNote = () =>
     this.setCurrentNote(this.blankNote())
 
+  saveNote = (note) => {
+    const notes = {...this.state.notes}
+    if (!note.id){
+      note.id = Date.now()
+    }
+    notes[note.id] = note
+    this.setState({ notes })
+    this.setCurrentNote(note)
 
+
+  }
 
 
   render() {
     const actions = {
       setCurrentNote: this.setCurrentNote,
-      resetCurrentNote: this.resetCurrentNote,      
+      resetCurrentNote: this.resetCurrentNote,
+      saveNote: this.saveNote,
     }
 
     return (
