@@ -26,13 +26,14 @@ class NoteForm extends Component {
                 name="title"
                 placeholder="Title your note"
                 value={currentNote.title}
-                onChange={}
+                onChange={this.handleChanges}
               />
             </p>
             
             <textarea 
               name="body"
-              value={currentNote.body}             
+              value={currentNote.body}
+              onChange={this.handleChanges}
             ></textarea>
               
 
